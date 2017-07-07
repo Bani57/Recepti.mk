@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Рецепти.мк</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+<script src="scripts.js" type="text/javascript"></script>
+<div id="bg"></div>
+<header>
+    <img id="ikona" src="img/ikona.png">
+<a id="naslov" href="index.html">Рецепти.мк</a>
+<nav>
+    <a target="_blank" href="http://finki.ukim.mk">Home</a>
+    <a target="_blank" href="http://courses.finki.ukim.mk">Courses</a>
+    <a target="_blank" href="http://code.finki.ukim.mk">Code</a>
+</nav>
+</header>
+<div id="content">
+   <p class="podnaslov" id="wlcm">Добредојдовте на веб страната за рецепти на Ф.И.Н.К.И.!</p>
+    <hr>
+    <div id="izbor">
+        <span id="izbor1" onclick="display1()" style="margin-right: 30px">Предјадења / Десерти</span>
+        <span id="izbor2" onclick="display2()">Главни јадења</span>
+    </div>
+    <p id="podnaslov2">Изберете рецепт</p>
+    <div id="q1">
+        <div class="quatro">
+            <img class="slika" id="bigquatro1" src="img/shop.jpg" onmouseout="mouseOutImg(1);" onclick="displayRecept(1);">
+            <div class="qq"> <img class="slika" id="tl" onmouseover = "changeImage('img/shop.jpg', 1);" src="img/shop2.jpg"></div>
+            <div class="qq"><img class="slika" id="tr" onmouseover = "changeImage('img/rus.jpg', 1);" src="img/rus2.jpg"></div>
+        </div>
+        <div class="quatro" style="padding-bottom: 150px;">
+            <div class="qq"><img class="slika" id="bl" onmouseover = "changeImage('img/bomb.jpg', 1);" src="img/bomb2.jpg"></div>
+            <div class="qq"> <img class="slika" id="br" onmouseover = "changeImage('img/pal.jpg', 1);" src="img/pal2.jpg"></div>
+        </div>
+        <hr id="hr1">
+    </div>
+    <div id="q2">
+        <div class="quatro">
+            <img class="slika" id="bigquatro2" src="img/shpag.jpg" onmouseout="mouseOutImg(2);" onclick="displayRecept(2);">
+            <div class="qq"> <img class="slika" id="tl2" onmouseover = "changeImage('img/shpag.jpg', 2);" src="img/shpag2.jpg"></div>
+            <div class="qq"><img class="slika" id="tr2" onmouseover = "changeImage('img/pi.jpg', 2);" src="img/pi2.jpg"></div>
+        </div>
+        <div class="quatro" style="padding-bottom: 150px;">
+            <div class="qq"><img class="slika" id="bl2" onmouseover = "changeImage('img/gra.jpg', 2);" src="img/gra2.jpg"></div>
+            <div class="qq"> <img class="slika" id="br2" onmouseover = "changeImage('img/mus.jpg', 2);" src="img/mus2.jpg"></div>
+        </div>
+        <hr id="hr2">
+    </div>
+    <div id="recepti">
+        <p id="naslov_recept"></p>
+
+        <div id="shopska">
+            <img src="img/shopska.jpg" class="slika receptslika">
+            <div class="sostojki" align="left">
+                <p class="podnaslov3">Состојки</p>
+
+                <label><input type="checkbox" class="checkall"><span class="avtor">Селектирај ги сите</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki1"> <span class="text">2 домати </span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki1"> <span class="text">1 мала главица кромид</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki1"> <span class="text">1 краставица</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki1"> <span class="text">1 зелена лута пиперка</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki1"> <span class="text">150 gr бело овчо сирење</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki1"> <span class="text">сол по вкус</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki1"> <span class="text">масло за јадење по вкус</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki1"> <span class="text">маслинки по вкус</span></label><br>
+            </div>
+            <p class="podnaslov3 podg">Подготовка</p>
+            <ol id="podg1">
+                <li class="text cekori1"><p>1</p><span>Краставицата се лупи и се сечка на мали коцки со големина од 1 см.</span></li>
+                <li class="text cekori1"><p>2</p><span>Доматите се сечкаат на коцки.</span></li>
+                <li class="text cekori1"><p>3</p><span>Кромидот се сечка ситно и заедно со краставицата и доматите се ставаат во чинија.</span></li>
+                <li class="text cekori1"><p>4</p><span>Салатата убаво се меша и се додава масло за јадење по вкус.</span></li>
+                <li class="text cekori1"><p>5</p><span>Лутата пиперка ситно се сечка. Сирењето ситно се ренда и заедно со пиперката се додаваат врз салатата.</span></li>
+                <li class="text cekori1"><p>6</p><span>Традиционално, салатата се декорира со маслинка на врвот.</span></li>
+            </ol>
+            <p class="strelka previousstep" onclick="levaStrelka();"><</p>
+            <p class="strelka nextsstep" onclick="desnaStrelka();">></p>
+            <p class="strelka totop"><</p>
+            <br>
+            <p class="avtor">Традиционален рецепт</p>
+        </div>
+
+        <div id="ruska">
+        <img class="slika receptslika" src="img/ruska.jpg">
+        <div class="sostojki" align="left">
+            <p class="podnaslov3">Состојки</p>
+            <label><input type="checkbox" class="checkall"><span class="avtor">Селектирај ги сите</span></label><br>
+            <label><input type="checkbox" name="sostojka" class="sostojki2"> <span class="text">1/2 kg компири</span></label><br>
+            <label><input type="checkbox" name="sostojka" class="sostojki2"> <span class="text">1/2 kg моркови</span></label><br>
+            <label><input type="checkbox" name="sostojka" class="sostojki2"> <span class="text">1/2 kg сечена салама</span></label><br>
+            <label><input type="checkbox" name="sostojka" class="sostojki2"> <span class="text">100 g грашок</span></label><br>
+            <label><input type="checkbox" name="sostojka" class="sostojki2"> <span class="text">10-тина кисели краставички</span></label><br>
+            <label><input type="checkbox" name="sostojka" class="sostojki2"> <span class="text">1 лажиче сенф</span></label><br>
+            <label><input type="checkbox" name="sostojka" class="sostojki2"> <span class="text">1 тегла мајонез</span></label><br>
+            <label><input type="checkbox" name="sostojka" class="sostojki2"> <span class="text">сол и бибер по вкус</span></label><br>
+        </div>
+        <p class="podnaslov3 podg">Подготовка</p>
+        <ol>
+            <li class="text cekori2"><p>1</p><span>Компирите се мијат, <u>нелупени</u> се варат се додека не станат премногу меки. Откако ќе се сварат се лупат и рендаат.</span></li>
+            <li class="text cekori2"><p>2</p><span>Морковите, миени и нелупени, се варат се додека не станат премногу меки. Сварените моркови се лупат и сечат на мали коцки.</span></li>
+            <li class="text cekori2"><p>3</p><span>Саламата се сече на коцки.</span></li>
+            <li class="text cekori2"><p>4</p><span>Киселите краставички се сечат на коцки.</span></li>
+            <li class="text cekori2"><p>5</p><span>Грашокот се обарува 15 минути ако не е од конзерва.</span></li>
+            <li class="text cekori2"><p>6</p><span>Сечените состоки се префрлаат во поголем сад и смесата се меша.</span></li>
+            <li class="text cekori2"><p>7</p><span>Постепено се додаваат мајонезот и сенфот и постојано се меша. Се додава сол и бибер по вкус.</span></li>
+        </ol>
+        <p class="strelka previousstep" onclick="levaStrelka();"><</p>
+        <p class="strelka nextsstep" onclick="desnaStrelka();">></p>
+            <p class="strelka totop"><</p>
+        <br>
+        <p class="avtor">Автор: Виолета Станковска</p>
+    </div>
+
+        <div id="bombici">
+            <img class="slika receptslika" src="img/bombici.jpg">
+
+            <div class="sostojki" align="left">
+                <p class="podnaslov3">Состојки</p>
+                <label><input type="checkbox" class="checkall"><span class="avtor">Селектирај ги сите</span></label><br>
+
+                <label><input type="checkbox" name="sostojka" class="sostojki3"> <span class="text">250гр мелени ореви</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki3"> <span class="text">250гр шеќер во прав</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki3"> <span class="text">2 лажичи како</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki3"> <span class="text">1 матена белка од јајце</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki3"> <span class="text">рум по вкус</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki3"> <span class="text">сок од лимон по вкус</span></label><br>
+            </div>
+            <p class="podnaslov3 podg">Подготовка</p>
+            <ol>
+                <li class="text cekori3"><p>1</p><span>Сите состојки од смесата се мешаат во поголем сад.</span></li>
+                <li class="text cekori3"><p>2</p><span>Се прават топчиња од смесата и се валкаат во кристал шеќер.</span></li>
+                <li class="text cekori3"><p>3</p><span>Топчињата се сервираат во книжни корпички.</span></li>
+            </ol>
+            <p class="strelka previousstep" onclick="levaStrelka();"><</p>
+            <p class="strelka nextsstep" onclick="desnaStrelka();">></p>
+            <p class="strelka totop"> < </p>
+            <br>
+            <p class="avtor">Автор: Вера Јанчевска</p>
+        </div>
+
+        <div id="palacinki">
+            <img src="img/palacinki.jpg" class="slika receptslika">
+            <div class="sostojki" align="left">
+                <p class="podnaslov3">Состојки</p>
+                <label><input type="checkbox" class="checkall"><span class="avtor">Селектирај ги сите</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki4"> <span class="text">1+1/2 шољи брашно</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki4"> <span class="text">3+1/2 лажички прашок за пециво</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki4"> <span class="text">1/2 лажичка сол</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki4"> <span class="text">1+1/4 шољи млеко</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki4"> <span class="text">2-3 јајцa</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki4"> <span class="text">газирана вода по вкус</span></label><br>
+
+            </div>
+            <p class="podnaslov3 podg">Подготовка</p>
+            <ol>
+                <li class="text cekori4"><p>1</p><span>Во поголем сад ставете ги брашното, прашокот за пециво и солта.</span></li>
+                <li class="text cekori4"><p>2</p><span>Во средината на садот направете простор каде ќе ги додадете млекото и јајцето.</span></li>
+                <li class="text cekori4"><p>3</p><span>Мешајте додека смесата не се соедини. По вкус се додава и кисела вода.</span></li>
+                <li class="text cekori4"><p>4</p><span>Од едно јајце се добиваат околу 7 палачинки, од две јајца 14 и.т.н.</span></li>
+                <li class="text cekori4"><p>5</p><span>Во тавче додатете малку зејтин и згрејте го на средно висок оган.</span></li>
+                <li class="text cekori4"><p>6</p><span>Со црпалка или директно истурете од тестото врз тавчето, за секоја палачинка доволно е отприлика 1 полна црпалка тесто.</span></li>
+                <li class="text cekori4"><p>7</p><span>Пржете ја палачинката додека не добие кафени нијанси од двете страни.</span></li>
+            </ol>
+            <p class="strelka previousstep" onclick="levaStrelka();"><</p>
+            <p class="strelka nextsstep" onclick="desnaStrelka();">></p>
+            <p class="strelka totop"><</p>
+            <br>
+            <p class="avtor">Интернационален рецепт</p>
+        </div>
+
+        <div id="shpageti">
+            <img class="slika receptslika" src="img/shpageti.jpg">
+            <div class="sostojki" align="left">
+                <p class="podnaslov3">Состојки</p>
+                <label><input type="checkbox" class="checkall"><span class="avtor">Селектирај ги сите</span></label><br>
+
+                <label><input type="checkbox" name="sostojka" class="sostojki5"> <span class="text">450g шпагети</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki5"> <span class="text">450g телешко мелено месо</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki5"> <span class="text">400ml доматно пире</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki5"> <span class="text"> 1 глава кромид</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki5"> <span class="text">1 морков</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki5"> <span class="text">3 чешниња лук</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki5"> <span class="text">80ml масло</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki5"> <span class="text">1 чајна лажичка оригано</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki5"> <span class="text">1 супена лажичка магдонос</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki5"> <span class="text">150g пармезан</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki5"> <span class="text">црн пипер</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki5"> <span class="text">вегета</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki5"> <span class="text">сол</span></label><br>
+            </div>
+            <p class="podnaslov3 podg">Подготовка</p>
+            <ol>
+                <li class="text cekori5"><p>1</p><span>Ставете на оган тавче со 50ml масло. Откако ќе се загрее маслото, додајте ги во него морковот и кромидот, ситно исечкани.</span></li>
+                <li class="text cekori5"><p>2</p><span>Кога кромидот ќе добие златна боја, во тавчето ставете го и меленото месо и пржете ги состојките 5-6 минути.</span></li>
+                <li class="text cekori5"><p>3</p><span>Потоа во тавчето додајте го доматното пире и лукот. Пржете додека не ја постигнете саканата густина.</span></li>
+                <li class="text cekori5"><p>4</p><span>Кон крајот на готвењето зачинете го сосот со оригано, црн пипер, вегета и магдонос.</span></li>
+                <li class="text cekori5"><p>5</p><span>Во тенџере со вода ставете ги шпагетите да се варат. Во водата додајте го остатокот од маслото (30ml) и малку сол.</span></li>
+                <li class="text cekori5"><p>6</p><span>Кога ќе бидат готови шпагетите, можете или да ги измешате со сосот или да ги ставите шпагетите во чинии и врз нив да ставите од сосот.</span></li>
+                <li class="text cekori5"><p>7</p><span>Поросете со пармезан и украсете со гранче босилек или магдонос.</span></li>
+            </ol>
+            <p class="strelka previousstep" onclick="levaStrelka();"><</p>
+            <p class="strelka nextsstep" onclick="desnaStrelka();">></p>
+            <p class="strelka totop"><</p>
+            <br>
+            <p class="avtor">Италијански рецепт</p>
+        </div>
+
+        <div id="pica">
+            <img class="slika receptslika" src="img/pica.jpg">
+            <div class="sostojki" align="left">
+                <p class="podnaslov3">Состојки</p>
+
+                <label><input type="checkbox" class="checkall"><span class="avtor">Селектирај ги сите</span></label><br>
+
+                <label><input type="checkbox" name="sostojka" class="sostojki6"> <span class="text">1/2 шоља сечкани артичоки</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki6"> <span class="text">маслиново масло</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki6"> <span class="text">сол и бибер</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki6"> <span class="text">200 гр. тесто за пица</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki6"> <span class="text">брашно</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki6"> <span class="text">1/2 шоља рикота</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki6"> <span class="text">500гр. моцарела</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki6"> <span class="text">50 гр. печена шунка</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki6"> <span class="text">50 гр. салама</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki6"> <span class="text">1/2 лажичка суво оригано</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki6"> <span class="text">1/4 шоља и 2 лажички маринат сос</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki6"> <span class="text">2 големи кремини печурки</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki6"> <span class="text">4 маслинки</span></label><br>
+            </div>
+            <p class="podnaslov3 podg">Подготовка</p>
+            <ol>
+                <li class="text cekori6"><p>1</p><span>Ставете го каменот за пица во рерна претходно загреана на 500 степени. Оставете го каменот да се грее 30 минути.</span></li>
+                <li class="text cekori6"><p>2</p><span>Во сад посипете ги артичоките со масло. Ставете сол и бибер по вкус.</span></li>
+                <li class="text cekori6"><p>3</p><span>На побрашнета површина, изтегнето го тестото за пица да биде околу 30 см долго, околу 1/2 см дебело.</span></li>
+                <li class="text cekori6"><p>4</p><span>Преклопете помалку од половина од пицата. Побрашнете ја даската за пица. Префрлете го тестото на даската и ставете малку масло.</span></li>
+                <li class="text cekori6"><p>5</p><span>Непреклопената страна од тестото посипете ја со половина од артичоките, моцарелата, рикотата, шунката и саламата, 5 см од крајот на тестото.</span></li>
+                <li class="text cekori6"><p>6</p><span>Додадете и половина од ориганото и 2 лажички од маринатот.</span></li>
+                <li class="text cekori6"><p>7</p><span>Крајот на тестото подигнете го и притиснете го врз тестото кон центарот.</span></li>
+                <li class="text cekori6"><p>8</p><span>Преостанатата 1/4 шоља маринат посипете ја врз тестото, оставајќи граница од 1 см.</span></li>
+                <li class="text cekori6"><p>9</p><span>Распределете ги преостанатите артичоки, моцарела, шунка и салама врз маринатот.</span></li>
+                <li class="text cekori6"><p>10</p><span>Со лажичка додадете рикота врз топингот, па потоа распределете ги печурките и маслинките.</span></li>
+                <li class="text cekori6"><p>11</p><span>Додадете го и преостанатото оригано.</span></li>
+                <li class="text cekori6"><p>12</p><span>Ставете ја пицата врз каменот и печете 8 до 10 минути, додека не е крцкава. Исечете на парчиња и сервирајте.</span></li>
+            </ol>
+            <p class="strelka previousstep" onclick="levaStrelka();"><</p>
+            <p class="strelka nextsstep" onclick="desnaStrelka();">></p>
+            <p class="strelka totop"><</p>
+            <br>
+            <p class="avtor">Италијански рецепт</p>
+        </div>
+
+        <div id="musaka">
+            <img class="slika receptslika" src="img/musaka.jpg">
+            <div class="sostojki" align="left">
+                <p class="podnaslov3">Состојки</p>
+                <label><input type="checkbox" class="checkall"><span class="avtor">Селектирај ги сите</span></label><br>
+
+                <label><input type="checkbox" name="sostojka" class="sostojki7"> <span class="text">500 gr мешано мелено месо</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki7"> <span class="text">100 ml масло за готвење</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki7"> <span class="text">1 главица кромид</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki7"> <span class="text">4-5 компири</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki7"> <span class="text">1/2 l млеко</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki7"> <span class="text">3 јајца</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki7"> <span class="text">сол, црвен и црн пипер</span></label><br>
+            </div>
+            <p class="podnaslov3 podg">Подготовка</p>
+            <ol>
+                <li class="text cekori7"><p>1</p><span>Месото се пржи во подлабоко тавче со 100 грама зејтин и претходно ситно исечкан и пропржен кромид. При крај се додава сол, бибер и црвена пиперка.</span></li>
+                <li class="text cekori7"><p>2</p><span>Компирите се лупат и се сечкаат на кругови со дебелина до 3-4 милиметри.</span></li>
+                <li class="text cekori7"><p>3</p><span>Во подлабок плех со средна големина, се реди компирот, а кога с&egrave; ќе се покрие се става меленото месо.</span></li>
+                <li class="text cekori7"><p>4</p><span>Одозгора се покрива со уште еден ред компири и с&egrave; се прелева со изматени 3 јајца со половина литар млеко.</span></li>
+                <li class="text cekori7"><p>5</p><span>Се пече во загреана рерна на 220 степени, околу 45 минути.</span></li>
+            </ol>
+            <p class="strelka previousstep" onclick="levaStrelka();"><</p>
+            <p class="strelka nextsstep" onclick="desnaStrelka();">></p>
+            <p class="strelka totop"><</p>
+            <br>
+            <p class="avtor">Традиционален рецепт</p>
+        </div>
+
+        <div id="grav">
+            <img class="slika receptslika" src="img/grav.jpg">
+            <div class="sostojki" align="left">
+                <p class="podnaslov3">Состојки</p>
+                <label><input type="checkbox" class="checkall"><span class="avtor">Селектирај ги сите</span></label><br>
+
+                <label><input type="checkbox" name="sostojka" class="sostojki8"> <span class="text">200 гр. грав</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki8"> <span class="text">1 главица кромид</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki8"> <span class="text">1 пиперка</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki8"> <span class="text">2-3 чешниња лук</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki8"> <span class="text">малку масло за готвење</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki8"> <span class="text">1-2 лажички црвен пипер</span></label><br>
+                <label><input type="checkbox" name="sostojka" class="sostojki8"> <span class="text">малку сол, нане и црн бибер</span></label><br>
+            </div>
+            <p class="podnaslov3 podg">Подготовка</p>
+            <ol>
+                <li class="text cekori8"><p>1</p><span>Измијте го гравот. Во сад со вода, ставете 1 лажица сода бикарбона, ставете го гравот и оставете го неколку часа.</span></li>
+                <li class="text cekori8"><p>2</p><span>Исплакнете го гравот неколку пати. Во сад со вода, на оган, ставете го да се вари заедно со цел кромид (исчистен), лукче и пиперка.</span></li>
+                <li class="text cekori8"><p>3</p><span>Варете го гравот се додека не омекне.(времето на варењето зависи од староста, типот...)</span></li>
+                <li class="text cekori8"><p>4</p><span>Во тавче, загрејте масло за готвење и ставете некоку лажички црвен пипер. Промешајте. Гравот исцедете го,(но не сосема), зачинете и ставете ја запршката.</span></li>
+                <li class="text cekori8"><p>5</p><span>Гравот е спремен за печење. Претурете го во керамички тави и печете се додека течноста не испари.</span></li>
+            </ol>
+
+            <p class="strelka previousstep" onclick="levaStrelka();"><</p>
+            <p class="strelka nextsstep" onclick="desnaStrelka();">></p>
+            <p class="strelka totop"><</p>
+            <br>
+            <p class="avtor">Традиционален рецепт</p>
+        </div>
+
+    </div>
+</div>
+<footer>
+    <p>&copy;Факултет за информатички науки и компјутерско инженерство, Скопје 2016</p>
+</footer>
+</body>
+</html>

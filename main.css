@@ -1,0 +1,413 @@
+body
+{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Foo','Clear Sans','Helvetica','Arial',sans-serif;
+}
+#bg
+{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    background: url(img/background.jpg) fixed -8.5px top no-repeat;
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: -1000;
+}
+
+#content
+{
+    position: relative;
+    width: 70%;
+    overflow: auto;
+    z-index: 10000;
+    min-height: calc(100% - 140px);
+    margin-left: auto;
+    margin-right: auto;
+    background: url("img/background2.jpg");
+    border-left: solid 5px rgb(160,0,0);
+    border-right: solid 5px rgb(160,0,0);
+    text-align: center;
+    color: white;
+    text-shadow:
+    -1px -1px 0 black,
+    -1px 1px 0 black,
+    1px -1px 0 black,
+    1px 1px 0 black;
+}
+
+html,body
+{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100%;
+}
+@font-face
+{
+    font-family: 'Foo';
+    src: url(foo.ttf) format("truetype");
+}
+header
+{
+    color: white;
+    background: linear-gradient(rgb(235,0,0),rgb(175,0,0));
+    margin: 0;
+    height: 70px;
+    width: 100%;
+}
+header #ikona
+{
+    height: 60px;
+    float: left;
+    position: relative;
+    z-index: 1;
+    top: 5px;
+    left: 15px;
+}
+header #naslov
+{
+    margin: 0;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    position: relative;
+    left: 2%;
+    top: 5px;
+    font-size: 48px;
+}
+header #naslov:hover
+{
+    color: rgb(235,235,0);
+}
+header nav
+{
+    display: inline-block;
+    float: right;
+    overflow: auto;
+    position: relative;
+    top: 21px;
+    right: 2%;
+}
+header nav a
+{
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+    font-size: 28px;
+}
+header nav a:hover
+{
+    color: rgb(235,235,0);
+}
+
+hr
+{
+    background-image: linear-gradient(to right, rgba(160,0,0,0), rgba(160,0,0,1), rgba(160,0,0,0));
+    width: 90%;
+    text-align: center;
+    border: 0;
+    height: 7px;
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
+#hr1
+{
+    margin-bottom: 20px;
+}
+
+#wlcm
+{
+    padding-top: 40px;
+    padding-bottom: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.podnaslov
+{
+    font-size: 36px;
+}
+#podnaslov2
+{
+    display: none;
+    font-size: 36px;
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+#naslov_recept
+{
+    font-size: 48px;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 40px;
+    padding-top: 20px;
+}
+.podnaslov3
+{
+    font-size: 36px;
+}
+#menu
+{
+    display: inline-block;
+}
+#menu a
+{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+#menu a:hover
+{
+    color: rgb(235,235,0);
+}
+.quatro
+{
+    height: 227px;
+}
+.qq
+{
+    display: inline-block;
+}
+#bigquatro1, #bigquatro2
+{
+    height: 450px;
+    width: 741px;
+    border-radius: 50%;
+    z-index: 100;
+    display: none;
+    position: absolute;
+}
+.slika
+{
+    height: 225px;
+    margin-left: 10px;
+    border: solid  rgb(160,0,0) 6px;
+    box-sizing: content-box;
+}
+#tl, #tl2
+{
+    border-top-left-radius: 100%;
+    margin-left: 10px;
+}
+#tr, #tr2
+{
+    border-top-right-radius: 100%;
+    margin-left: -10px;
+}
+#bl, #bl2
+{
+    border-bottom-left-radius: 100%;
+    margin-left: 10px;
+}
+#br, #br2
+{
+    border-bottom-right-radius: 100%;
+    margin-left: -10px;
+}
+#q1,#q2
+{
+    display: none;
+}
+#izbor
+{
+    padding-top: 200px;
+    font-size: 26px;
+    padding-bottom: 30px;
+}
+#izbor1,#izbor2
+{
+    display: inline-block;
+    width: 23%;
+    margin-bottom: 60px;
+    border: solid 5px rgb(160,0,0);
+    background: linear-gradient(rgb(235,0,0),rgb(205,0,0));
+    padding: 5px;
+}
+#izbor1:hover,#izbor2:hover
+{
+    cursor: pointer;
+    cursor: hand;
+    background: linear-gradient(rgb(205,0,0),rgb(235,0,0));
+}
+#shopska,#pica,#bombici,#palacinki,#shpageti,#ruska,#musaka,#grav
+{
+    display: none;
+    width: 90%;
+    margin: auto;
+}
+.receptslika
+{
+    width: 40%;
+    height: auto;
+    display: inline-block;
+    float: right;
+    margin-top: 110px;
+}
+.sostojki
+{
+    display: inline-block;
+    width: 40%;
+    padding-left: 5%;
+}
+input:not(.checkall):checked + span
+{
+    text-decoration: line-through;
+    color: rgb(229, 229, 229);
+}
+
+.checkall, .strelka, label
+{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.text, .checkall, label
+{
+    font-size: 28px;
+}
+
+.checkall
+{
+    display: none;
+}
+.checkall:hover + span:hover
+{
+    cursor: pointer;
+    cursor: hand;
+    background: linear-gradient(rgb(205,0,0),rgb(235,0,0));
+}
+.checkall:checked + span
+{
+    background: linear-gradient(rgb(205,0,0),rgb(235,0,0));
+}
+
+.podg
+{
+    clear: both;
+    padding-top: 50px;
+}
+ol
+{
+    width: 100%;
+    margin: auto;
+    counter-reset: li;
+    padding-left: 0;
+}
+ol li
+{
+    display: none;
+    height: 80px;
+    line-height: 80px;
+    position: relative;
+    margin:0 0 6px 2em;
+    padding: 4px 8px;
+    list-style: none;
+    border-top: 2px solid rgb(205,0,0);
+    background: linear-gradient(white,rgb(205,205,205));
+}
+ol li span
+{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 30px;
+}
+ol li:first-child
+{
+    display: block;
+}
+ol li p
+{
+    line-height: normal;
+    position: absolute;
+    top: -30px;
+    left: -2em;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 2em;
+    margin-right: 8px;
+    padding: 4px;
+    border-top: 2px solid rgb(205,0,0);
+    color: #fff;
+    background: linear-gradient(rgb(235,0,0),rgb(205,0,0));
+    font-family: 'Foo', 'Clear Sans', 'Helvetica','Arial',sans-serif;
+    text-align: center;
+}
+li ol,li ul
+{
+    margin-top: 6px;
+}
+ol ol li:last-child
+{
+    margin-bottom: 0;
+}
+.strelka
+{
+    width: 64px;
+    height: 64px;
+    font-size: 56px;
+    background: linear-gradient(rgb(235,0,0),rgb(205,0,0));
+    color: white;
+    display: inline-block;
+    border: groove rgb(205,0,0) 5px;
+    border-radius: 50%;
+    margin: 30px 0 0 10px;
+}
+
+.strelka:hover
+{
+    background: linear-gradient(rgb(205,0,0),rgb(235,0,0));
+    cursor: pointer;
+    cursor: hand;
+}
+
+.previousstep
+{
+    margin-left: 80px;
+}
+.totop
+{
+    float: right;
+    text-decoration: none;
+    transform: rotate(90deg);
+    background: linear-gradient(to left,rgb(205,0,0),rgb(235,0,0));
+}
+.totop:hover
+{
+    background: linear-gradient(to left,rgb(235,0,0),rgb(205,0,0));
+}
+.avtor
+{
+    display: inline-block;
+    font-size: 24px;
+    background: linear-gradient(rgb(235,0,0),rgb(205,0,0));
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding: 0 5px;
+    border: groove rgb(205,0,0) 5px;
+}
+
+footer
+{
+    color: white;
+    background: linear-gradient(rgb(235,0,0),rgb(165,0,0));
+    height: 70px;
+    width: 100%;
+    text-align: center;
+}
+
+footer p
+{
+    display: inline-block;
+    margin: 0;
+    font-size: 28px;
+    position: relative;
+    top: 21px;
+}
